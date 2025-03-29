@@ -16,7 +16,7 @@ app.use('/users', userRoutes);
 // const bookingRoutes = require('./routes/bookings');
 // app.use('/bookings', bookingRoutes);
 
-const PORT = process.env.PORT || 3000; // Ensure it picks the Railway port
+const PORT = process.env.PORT; // Ensure it picks the Railway port
 
 app.listen(PORT, () => {
   console.log(`✅ Server running on port ${PORT}`);
