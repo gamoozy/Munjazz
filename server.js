@@ -11,11 +11,9 @@ app.use(express.json());
 mongoose.connect(process.env.MONGO_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
-  tls: true, // Ensure TLS is enabled for Cosmos DB
-  retryWrites: false, // Cosmos DB does not support retryWrites
 })
-  .then(() => console.log('✅ Connected to Azure Cosmos DB'))
-  .catch(err => console.error('❌ Azure Cosmos DB connection error:', err));
+  .then(() => console.log('✅ Connected to MongoDB'))
+  .catch(err => console.error('❌ MongoDB connection error:', err));
 
 // Import route files
 const userRoutes = require('./routes/users');
